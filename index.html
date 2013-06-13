@@ -443,7 +443,7 @@ client.newPost({
 &lt;script>{
   "title": "Intro to jQuery"
 }&lt;/script>
-&lt;p>jQuery is ...&lt;p>
+&lt;p>jQuery is ...&lt;/p>
             </pre>
             <p>Valid HTML, invisible metadata, local preview</p>
           </section>
@@ -521,7 +521,7 @@ client.newPost({
           </header>
           <section class="text">
             <p><a href="https://github.com/jquery/jquery-wp-content">jquery-wp-content</a> is a custom replacement for the standard <code>wp-content</code> directory. Most of our customizations use the standard APIs through the existing plugin architecture.</p>
-            <p>The biggest customization is our custom installer written by Andrew Nacin, which handles auto-provisioning of new sites. Adding a new site is as simple as adding an entry to an array. The first time someone visits the site, it was auto-install and then render the page.</p>
+            <p>The biggest customization is our custom installer written by Andrew Nacin, which handles auto-provisioning of new sites. Adding a new site is as simple as adding an entry to an array. The first time someone visits the site, it will auto-install and then render the page.</p>
           </section>
         </div>
 
@@ -530,7 +530,7 @@ client.newPost({
             <h1>Theme Inheritance</h1>
           </header>
           <section class="text">
-            <p>WordPress' built-in theming system allows us to have parent and chlid themes. So we can have all of our common styles in a base theme and then each site can have its own theme which inherits from the base.</p>
+            <p>WordPress' built-in theming system allows us to have parent and child themes. So we can have all of our common styles in a base theme and then each site can have its own theme which inherits from the base.</p>
             <p>This is fantastic when you're managing your brand across 20 sites.</p>
           </section>
         </div>
@@ -547,7 +547,7 @@ client.newPost({
                   <li>node-wordpress for individual plugin pages</li>
                 </ul>
               </li>
-              <li>node HTTP server listening for post-recieve hooks <span style="font-size: 75%;">(not node-git-notifier)</span></li>
+              <li>node HTTP server listening for post-receive hooks <span style="font-size: 75%;">(not node-git-notifier)</span></li>
               <li>New publishing model to avoid spam and increase quality:
                 <ul>
                   <li>GitHub</li>
@@ -607,7 +607,7 @@ fastcgi_pass   unix:/var/run/php5-fpm.sock;
             <ul>
               <li>Configuration Management - puppet!</li>
               <li>Control all configuration from a central github repo</li>
-              <li>Centralized Config Manament - puppet master</li>
+              <li>Centralized Config Management - puppet master</li>
               <li>Deploy changes instantly (notifier)</li>
               <li>Build another server easily</li>
               <li>Very modular</li>
@@ -664,6 +664,18 @@ jquery::siteupdater::site{ "contribute.jquery.org": }
         </div>
 
         <div class="slide">
+          <header class="moreLegit">
+            <h1 class="middleGuy">How do we know it <em>works</em>?</h1>
+          </header>
+        </div>
+
+        <div class="slide">
+          <header class="moreLegit">
+          <h1 class="middleGuy">"Wow, that was awesome! How can I help?"<br/>--You</h1>
+          </header>
+        </div>
+
+        <div class="slide">
           <header>
           <h1>Great Question!</h1>
           </header>
@@ -680,7 +692,7 @@ jquery::siteupdater::site{ "contribute.jquery.org": }
 
         <div class="slide">
           <header class="moreLegit">
-          <h1 class="middleGuy">"But what should I help with?"<br/>--You</h1>
+          <h1 class="middleGuy">"But what should<br/>I help with?"<br/>--You</h1>
           </header>
         </div>
 
