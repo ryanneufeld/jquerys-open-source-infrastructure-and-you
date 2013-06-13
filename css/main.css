@@ -384,7 +384,7 @@
         border: 1px solid rgba(0, 0, 0, 0.2);
       }
       .css, .js, .html {
-	font-family: 'Consolas';
+	font-family: 'Consolas', monospace;
 	font-size: 36px;
 	line-height:42px;
       }
