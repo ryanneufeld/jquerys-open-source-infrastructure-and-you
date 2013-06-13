@@ -309,41 +309,13 @@
 
         <div class="slide">
           <header>
-            <h1>Automating Deploys</h1>
+            <h1>Site Requirements</h1>
           </header>
           <section class="text">
             <ul>
-              <li><a href="https://github.com/scottgonzalez/node-git-notifier">node-git-notifier</a>
-                <ul>
-                  <li>Notifications for every push</li>
-                  <li>Optionally filtered by branch, tag, or namespace</li>
-                </ul>
-              </li>
-              <li><a href="https://github.com/gnarf37/node-notifier-server">node-notifier-server</a>
-                <ul>
-                  <li>Run a shell script based on notifications</li>
-                </ul>
-              </li>
-              <li>Deploy to staging server on every push to master.</li>
-              <li>Deploy to production on every tag.</li>
-            </ul>
-            <p>Built-in protection from spam (and Adam)!<br><span style="font-size: 75%; padding-left: 2em;">Remember the plugins site?</span></p>
-          </section>
-        </div>
-
-        <div class="slide">
-          <header>
-            <h1>Deploying a Site</h1>
-          </header>
-          <section class="text">
-            <ul>
-              <li>Requirements
-                <ul>
-                  <li>Content in markdown</li>
-                  <li>Managed with git &amp; GitHub</li>
-                  <li>Published via WordPress</li>
-                </ul>
-              </li>
+              <li>Content in markdown</li>
+              <li>Managed with git &amp; GitHub</li>
+              <li>Published via WordPress</li>
             </ul>
           </section>
         </div>
@@ -564,6 +536,31 @@ client.newPost({
         </div>
 
         <div class="slide">
+          <header>
+            <h1>Plugins Site</h1>
+          </header>
+          <section class="text">
+            <ul>
+              <li>Mixture of grunt-jquery-content and node-wordpress:
+                <ul>
+                  <li>grunt-jquery-content for docs pages</li>
+                  <li>node-wordpress for individual plugin pages</li>
+                </ul>
+              </li>
+              <li>node HTTP server listening for post-recieve hooks <span style="font-size: 75%;">(not node-git-notifier)</span></li>
+              <li>New publishing model to avoid spam and increase quality:
+                <ul>
+                  <li>GitHub</li>
+                  <li>Licensing</li>
+                  <li>Tags &amp; Semantic Versioning</li>
+                </ul>
+              </li>
+              <li>SQLite as the canonical plugin registry</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="slide">
           <header class="moreLegit">
           <h1 class="middleGuy">"It works on my machine"<br>-Scott Gonzalez</h1>
           </header>
@@ -627,6 +624,30 @@ jquery::siteupdater::site{ "contribute.jquery.org": }
 
         <div class="slide">
           <header>
+            <h1>Automating Deploys</h1>
+          </header>
+          <section class="text">
+            <ul>
+              <li><a href="https://github.com/scottgonzalez/node-git-notifier">node-git-notifier</a>
+                <ul>
+                  <li>Notifications for every push</li>
+                  <li>Optionally filtered by branch, tag, or namespace</li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/gnarf37/node-notifier-server">node-notifier-server</a>
+                <ul>
+                  <li>Run a shell script based on notifications</li>
+                </ul>
+              </li>
+              <li>Deploy to staging server on every push to master.</li>
+              <li>Deploy to production on every tag.</li>
+            </ul>
+            <p>Built-in protection from spam (and Adam)!<br><span style="font-size: 75%; padding-left: 2em;">Remember the plugins site?</span></p>
+          </section>
+        </div>
+
+        <div class="slide">
+          <header>
             <h1>We also have a library!</h1>
           </header>
           <section class="text">
@@ -638,31 +659,6 @@ jquery::siteupdater::site{ "contribute.jquery.org": }
               <li>uploads a build to <a href="https://github.com/jquery/testswarm">testswarm</a></li>
               <li>spawn workers on browserstack - <a href="https://github.com/clarkbox/testswarm-browserstack">testswarm-browserstack</a></li>
               <li>More Information on <a href="https://github.com/jquery/testswarm/wiki/Automated-Distributed-Continuous-Integration-for-JavaScript">github jquery/testswarm wiki</a></li>
-            </ul>
-          </section>
-        </div>
-
-        <div class="slide">
-          <header>
-            <h1>Plugins Site</h1>
-          </header>
-          <section class="text">
-            <ul>
-              <li>Mixture of grunt-jquery-content and node-wordpress:
-                <ul>
-                  <li>grunt-jquery-content for docs pages</li>
-                  <li>node-wordpress for individual plugin pages</li>
-                </ul>
-              </li>
-              <li>node HTTP server listening for post-recieve hooks <span style="font-size: 75%;">(not node-git-notifier)</span></li>
-              <li>New publishing model to avoid spam and increase quality:
-                <ul>
-                  <li>GitHub</li>
-                  <li>Licensing</li>
-                  <li>Tags &amp; Semantic Versioning</li>
-                </ul>
-              </li>
-              <li>SQLite as the canonical plugin registry</li>
             </ul>
           </section>
         </div>
