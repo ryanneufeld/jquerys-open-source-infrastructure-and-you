@@ -564,6 +564,85 @@ client.newPost({
         </div>
 
         <div class="slide">
+          <header class="moreLegit">
+          <h1 class="middleGuy">"It works on my machine"<br>-Scott Gonzalez</h1>
+          </header>
+        </div>
+
+        <div class="slide">
+          <header>
+            <h1>Getting it to the users</h1>
+          </header>
+          <section class="text">
+          <ul>
+            <li>Web Server! - nginx</li>
+            <li>PHP Interpreter - php-fpm</li>
+            <li>Cache - nginx</li>
+          </ul>
+          <pre><code>
+fastcgi_cache microcache_fpm;
+fastcgi_cache_key $scheme$host$request_method$request_uri;
+fastcgi_cache_valid 200 304 2m;
+fastcgi_pass   unix:/var/run/php5-fpm.sock;
+</code></pre>
+          </section>
+        </div>
+
+        <div class="slide">
+          <header>
+            <h1>Some numbers</h1>
+          </header>
+          <section class="text">
+          <ul class="fragment">
+            <li>All from one public facing server!</li>
+            <li>per hour: between 30K - 100K page views</li>
+            <li>per day: ~1.6M</li>
+          </ul>
+          <img src="images/webserver.png" alt="graph of usage">
+          </section>
+        </div>
+
+        <div class="slide">
+          <header>
+            <h1>Setting up the servers</h1>
+          </header>
+          <section class="text">
+            <ul>
+              <li>Configuration Management - puppet!</li>
+              <li>Control all configuration from a central github repo</li>
+              <li>Centralized Config Manament - puppet master</li>
+              <li>Deploy changes instantly (notifier)</li>
+              <li>Build another server easily</li>
+              <li>Very modular</li>
+              <li>Adding a new site? No Problem!</li>
+            </ul>
+            <pre><code># on the web server
+wordpress::site{ "contribute.jquery.org": }
+
+# on the building server
+jquery::siteupdater::site{ "contribute.jquery.org": }
+</code></pre>
+          </section>
+        </div>
+
+        <div class="slide">
+          <header>
+            <h1>We also have a library!</h1>
+          </header>
+          <section class="text">
+            <ul>
+              <li>Continuous Integration - Jenkins</li>
+              <li>Build on github push</li>
+              <li>grunt / phantomjs / etc</li>
+              <li>uploads the -git build to CDN</li>
+              <li>uploads a build to <a href="https://github.com/jquery/testswarm">testswarm</a></li>
+              <li>spawn workers on browserstack - <a href="https://github.com/clarkbox/testswarm-browserstack">testswarm-browserstack</a></li>
+              <li>More Information on <a href="https://github.com/jquery/testswarm/wiki/Automated-Distributed-Continuous-Integration-for-JavaScript">github jquery/testswarm wiki</a></li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="slide">
           <header>
           <h1>Great Question!</h1>
           </header>
